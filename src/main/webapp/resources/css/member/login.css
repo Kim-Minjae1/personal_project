@@ -1,0 +1,86 @@
+/* 기본 설정 */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+    height: 100%;
+}
+
+/* 섹션 래퍼 */
+#section_wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* 로그인 텍스트 */
+.word {
+    margin-bottom: 20px;
+}
+
+.word h3 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+}
+
+/* 로그인 폼 */
+.login_form {
+    background-color: #fff;
+    padding: 40px;
+    border: 1px solid #ccc; /* 테두리 추가 */
+    border-radius: 8px; /* 둥근 테두리 */
+    box-shadow: none; /* 박스 그림자 제거 */
+    width: 100%;
+    max-width: 400px;
+}
+
+/* 입력 필드 */
+.login_form input[type="text"],
+.login_form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* 체크박스 */
+.login_form input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.login_form label {
+    font-size: 14px;
+    color: #666;
+}
+
+/* 버튼 스타일 */
+.login_form input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #0080ff;
+    border: none;
+    border-radius: 4px;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.login_form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* 반응형 설정 */
+@media (max-width: 600px) {
+    .login_form {
+        padding: 20px;
+    }
+}

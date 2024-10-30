@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC
+"-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="memberMapper" >
+	
+	<insert id="createMember" parameterType="com.personal.spring.member.model.vo.Member">
+	INSERT INTO `user`(user_id, user_pw,user_name,user_address)
+		 VALUES(#{user_id}, #{user_pw}, #{user_name}, #{user_address})
+	</insert>
+	<select id="selectMemberById" parameterType="string" resultType="com.personal.spring.member.model.vo.Member">
+		SELECT * FROM `user`
+		<where>
+			user_id = #{user_id}
+		</where> 
+	</select>
+	<select id="selectMemberByAdress" parameterType="string" resultType="com.personal.spring.member.model.vo.Member">
+		SELECT * FROM `user`
+		<where>
+			user_adress = #{user_adress}
+		</where> 
+	</select>
+	<select id="selectMemberByCity" parameterType="string" resultType="com.personal.spring.member.model.vo.Member">
+        SELECT * FROM `user`
+        WHERE user_id = #{user_id}
+        AND (
+            user_address LIKE '%서울%' OR
+            user_address LIKE '%부산%' OR
+            user_address LIKE '%대구%' OR
+            user_address LIKE '%인천%' OR
+            user_address LIKE '%광주%' OR
+            user_address LIKE '%대전%' OR
+            user_address LIKE '%울산%' OR
+            user_address LIKE '%세종%' OR
+            user_address LIKE '%수원%' OR
+            user_address LIKE '%고양%' OR
+            user_address LIKE '%용인%' OR
+            user_address LIKE '%성남%' OR
+            user_address LIKE '%부천%' OR
+            user_address LIKE '%안산%' OR
+            user_address LIKE '%안양%' OR
+            user_address LIKE '%남양주%' OR
+            user_address LIKE '%화성%' OR
+            user_address LIKE '%평택%' OR
+            user_address LIKE '%의정부%' OR
+            user_address LIKE '%시흥%' OR
+            user_address LIKE '%파주%' OR
+            user_address LIKE '%김포%' OR
+            user_address LIKE '%광주%' OR
+            user_address LIKE '%군포%' OR
+            user_address LIKE '%광명%' OR
+            user_address LIKE '%하남%' OR
+            user_address LIKE '%오산%' OR
+            user_address LIKE '%이천%' OR
+            user_address LIKE '%안성%' OR
+            user_address LIKE '%의왕%' OR
+            user_address LIKE '%양주%' OR
+            user_address LIKE '%구리%' OR
+            user_address LIKE '%포천%' OR
+            user_address LIKE '%여주%' OR
+            user_address LIKE '%동두천%' OR
+            user_address LIKE '%과천%' OR
+            user_address LIKE '%춘천%' OR
+            user_address LIKE '%원주%' OR
+            user_address LIKE '%강릉%' OR
+            user_address LIKE '%동해%' OR
+            user_address LIKE '%태백%' OR
+            user_address LIKE '%속초%' OR
+            user_address LIKE '%삼척%' OR
+            user_address LIKE '%청주%' OR
+            user_address LIKE '%충주%' OR
+            user_address LIKE '%제천%' OR
+            user_address LIKE '%천안%' OR
+            user_address LIKE '%공주%' OR
+            user_address LIKE '%보령%' OR
+            user_address LIKE '%아산%' OR
+            user_address LIKE '%서산%' OR
+            user_address LIKE '%논산%' OR
+            user_address LIKE '%계룡%' OR
+            user_address LIKE '%당진%' OR
+            user_address LIKE '%전주%' OR
+            user_address LIKE '%군산%' OR
+            user_address LIKE '%익산%' OR
+            user_address LIKE '%정읍%' OR
+            user_address LIKE '%남원%' OR
+            user_address LIKE '%김제%' OR
+            user_address LIKE '%목포%' OR
+            user_address LIKE '%여수%' OR
+            user_address LIKE '%순천%' OR
+            user_address LIKE '%나주%' OR
+            user_address LIKE '%광양%' OR
+            user_address LIKE '%포항%' OR
+            user_address LIKE '%경주%' OR
+            user_address LIKE '%김천%' OR
+            user_address LIKE '%안동%' OR
+            user_address LIKE '%구미%' OR
+            user_address LIKE '%영주%' OR
+            user_address LIKE '%영천%' OR
+            user_address LIKE '%상주%' OR
+            user_address LIKE '%문경%' OR
+            user_address LIKE '%경산%' OR
+            user_address LIKE '%창원%' OR
+            user_address LIKE '%진주%' OR
+            user_address LIKE '%통영%' OR
+            user_address LIKE '%사천%' OR
+            user_address LIKE '%김해%' OR
+            user_address LIKE '%밀양%' OR
+            user_address LIKE '%거제%' OR
+            user_address LIKE '%양산%' OR
+            user_address LIKE '%제주%' OR
+            user_address LIKE '%서귀포%'
+        )
+    </select>
+</mapper>

@@ -1,0 +1,118 @@
+@charset "UTF-8";
+body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e0f7fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            width: 90%;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #e0f7fa;
+            margin-bottom: 10px;
+            margin-top: 20px;
+        }
+
+        .logo {
+            flex-grow: 1;
+            text-align: center;
+            color: #ff8a65;
+            margin-left: 90px;
+        }
+
+        header h1 {
+            
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .header-buttons button {
+            padding: 5px 10px;
+            font-size: 1em;
+            color: rgb(0, 0, 0);
+            background-color: #ffffff;
+            border: none;
+            border-radius: 20px; /* 버튼에 둥근 모서리 추가 */
+            cursor: pointer;
+        }
+
+        .search-container {
+            margin: 10px 0;
+        }
+
+        .search-container input[type="text"] {
+            padding: 5px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 300px;
+            height: 30px;
+            margin-right: 5px;
+        }
+
+        .search-container button {
+            padding: 5px 10px;
+            font-size: 0.9em;
+            color: white;
+            background-color: #ff8a65;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            height: 40px;
+        }
+
+        .main-weather {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 50%;
+            margin-bottom: 20px;
+            margin-top: 10px;
+        }
+
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            margin-left: 50px;
+            line-height: 1;
+        }
+
+        .weather-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 90%;
+        }
+
+        .weather-card {
+            background-color: #cfd8dc;
+            border-radius: 10px;
+            padding: 10px;
+            width: 13%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            font-size: 1em;
+        }
+
+        .weather-card .icon {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        #curcity {
+            font-size: 36px;
+            font-weight: bold;
+        }
